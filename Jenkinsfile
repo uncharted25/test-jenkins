@@ -20,7 +20,7 @@ pipeline {
             steps {
                 echo "Devops word count: "
                 sh """
-                   ./exercise1-1.sh
+                   . ./exercise1-1.sh
                 """
                 
             }
@@ -29,7 +29,7 @@ pipeline {
             steps {
                 echo "Hellow world word replacement: "
                 sh """
-                   ./exercise2-1.sh
+                   . ./exercise2-1.sh
                 """
             }
         }
