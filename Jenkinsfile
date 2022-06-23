@@ -19,9 +19,9 @@ pipeline {
         stage('exercise1') {
             steps {
                 echo "Devops word count: "
-                sh """#!/bin/bash -xe
-                    cd ${WORKSPACE}
-                    tr '[:space:]' '[\n*]' < test.txt | grep -i -c devops
+                sh """
+                   chmod +x ./exercise1.sh
+                   ./exercise1.sh
                 """
                 
             }
@@ -29,11 +29,10 @@ pipeline {
         stage('exercise2') {
             steps {
                 echo "Hellow world word replacement: "
-                sh """#!/bin/bash -xe
-                    cd ${WORKSPACE}
-                    sed 's/devops/hello world/g' test.txt > test2.txt
-                    cat test2.txt
-                """   
+                sh """
+                   chmod +x ./exercise2.sh
+                   ./exercise2.sh
+                """
             }
         }
     }
